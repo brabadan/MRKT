@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/app/index.tsx",
   "scripts": {
-    "build": "SET NODE_ENV=production &&  webpack -p --config webpack.production.config.js --progress --profile --colors",
+    "build": "webpack -p --progress --profile --colors",
     "start": "webpack-dev-server --open",
     "dev": "webpack-dev-server --progress --profile --colors --hot --open",
     "lint": "tslint \"src/app/**/*.ts*\"",
