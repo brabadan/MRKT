@@ -1,0 +1,85 @@
+@box-padding: 20px;
+@border-color: RGB(230, 230, 230);
+@button-color: RGB(120, 100, 170);
+
+.login-box {
+    width: 400px;
+    height: 380px;
+    box-shadow: 0 0 30px @border-color;
+    border: solid 2px @border-color;
+    border-radius: 6px;
+    padding: @box-padding;
+    font-family: sans-serif;
+
+    .login-box__header {
+        display: flex;
+        justify-content: space-between;
+
+        .text {
+            font-size: xx-large;
+            font-weight: 800;
+        }
+
+        & .link {
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none
+        }
+    }
+    
+    .form {
+        margin-top: 32px;
+        
+        & label {
+            font-size: 20px;
+            font-weight: 600;
+        }
+        
+        .input-field {
+            @pl: 12px;
+            width: calc(100% - @pl * 2);
+            border: 2px solid @border-color;
+            height: 40px;
+            margin: 6px 0 26px;
+            border-radius: 3px;
+            padding: 0 @pl;
+            display: flex;
+            align-items: center;
+
+            & input {
+                font-size: 20px;
+                border-width: 0;
+                flex: 1;
+            }
+            
+            & input:focus {
+                outline: none;
+            }
+            
+            .remind-button {
+                margin-left: 8px;
+                color: @button-color;
+                cursor: pointer;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+    
+    & hr {
+        margin-left: -@box-padding;
+        margin-right: -@box-padding;
+        border: solid 1.5px @border-color;
+    }
+    
+    & button {
+        background-color: @button-color;
+        color: white;
+        font-size: 22px;
+        padding: 12px 23px;
+        border: none;
+        border-radius: 3px;
+        margin-top: 16px;
+        cursor: pointer;
+    }
+}
